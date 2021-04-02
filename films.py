@@ -33,13 +33,6 @@ films = [
 
 print(films[0]["costars"][0])
 
-my_film = films[0]
-
-my_costars = my_film["costars"]
-
-first_costar = my_costars[0]
-
-print(first_costar)
 
 
 
