@@ -34,7 +34,10 @@ films = [
 
 # function to check if an actor appears in a list of films
 # return True if they do, False if they don't
-def check_films_for_actor(list_of_films, actor_to_find):
+def check_films_for_actor(list_of_films):
+
+    # ask user for the actor to find
+    actor_to_find = input("Who are you looking for? ")
     
     # loop through films
     # for each film:
@@ -53,5 +56,5 @@ def check_films_for_actor(list_of_films, actor_to_find):
     return False
 
 
-did_we_find_them = check_films_for_actor(films, "John Hurt")
+did_we_find_them = check_films_for_actor(films)
 print(did_we_find_them)
