@@ -31,12 +31,27 @@ films = [
     }
 ]
 
-print(films[0]["costars"][0])
+
+# function to check if an actor appears in a list of films
+# return True if they do, False if they don't
+def check_films_for_actor(list_of_films, actor_to_find):
+    
+    # loop through films
+    # for each film:
+    for film in list_of_films:
+        # check stars and costars for actor
+        # if we find the actor
+            # checking equality for star because film["star"] is a string
+            # checking "in" for costars because film["costars"] is a list
+        if film["star"] == actor_to_find or actor_to_find in film["costars"]:
+        # if actor_to_find in (film["star"], film["costars"]):
+            # return True
+            return True
+        
+    # if we don't find the actor in any film
+    # return False
+    return False
 
 
-
-
-
-print(f'The film {films[0]["title"]} has the genre {films[0]["genre"]}')
-
-# print(films[0]["title"], films[0]["genre"])
+did_we_find_them = check_films_for_actor(films, "John Hurt")
+print(did_we_find_them)
